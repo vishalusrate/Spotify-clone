@@ -192,7 +192,7 @@ body {
 
 .playbar {
     position: sticky;
-    bottom: 0px;
+    bottom: 30px;
     top: 100%;
     background-color: #d3e8db;
     padding: 10px;
@@ -201,7 +201,12 @@ body {
     background-color: rgb(170, 165, 165);
     border-radius: 20px;
     min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px 10px;
 }
+
 
 .songbutton {
     display: flex;
@@ -257,7 +262,7 @@ body {
     width: 97%;
     border: 2px solid red;
     position: fixed;
-    bottom: 0px;
+    bottom: 8px;
     border-radius: 10px;
     margin: 6px;
     cursor: pointer;
@@ -334,6 +339,8 @@ cursor: pointer;
         transition: all .3s ease-in;
         z-index: 1;
         width: 370px;
+        position: fixed;
+        width: 100vw;
     }
     .spotifyPlaylist h1{
         text-align: center;
@@ -379,10 +386,16 @@ cursor: pointer;
     .timeval{
         flex-direction: column;
     }
+    .play{
+       
+        height: 27px;
+        width: 30px;
+        bottom: 88px;
+    }
 }
 
 @media screen and (max-width: 600px) {
-
+    
     .playbar {
         margin: auto 10px;
         font-size: 10px;
@@ -395,10 +408,13 @@ cursor: pointer;
         width: 100%;
         height: auto;
     }
-
+    
     .cardContainer {
         justify-content: center;
         margin: 0;
+        max-height: unset;
+        overflow-y: unset;
+        margin-bottom: 30vh;
     }
     .abovebar{
         flex-direction: column;
@@ -422,8 +438,15 @@ cursor: pointer;
 @media screen and (max-width: 300px) {
     .header {
         margin-top: 0px;
-        margin-top: 23px;
+        margin-top: 3px;
         width: 98%;
+    }
+    .loginbtn,.signupbtn{
+              
+        width: 43%;
+    }
+    .left {
+        left: -289%;
     }
     .card{
         width: 100%;
@@ -433,8 +456,12 @@ cursor: pointer;
         margin: 0;
 
     }
-    .spotifyPlaylist{
-        padding: 0;
+    .spotifyPlaylist h1 {
+        text-align: center;
+        font-size: 20px;
+        padding: 0px;
     }
-
+    .header>* {
+        padding: 0px;
+    }
 }

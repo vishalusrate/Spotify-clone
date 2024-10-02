@@ -183,6 +183,9 @@ async function main() {
     // adding the volume functionality in the audio
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
         currentSongs.volume = parseInt(e.target.value) / 100;
+        if(currentSongs.volume > 0){
+            document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("img/mute.svg","img/volume.svg")
+        }
     })
     // add event listener for the volume functionalty 
 
