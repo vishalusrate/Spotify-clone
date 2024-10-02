@@ -329,7 +329,7 @@ cursor: pointer;
 @media screen and (max-width: 1100px) {
     .left {
         background-color: rgb(14, 0, 0);
-        left: -140%;
+        left: -170%;
         position: absolute;
         transition: all .3s ease-in;
         z-index: 1;
@@ -406,21 +406,24 @@ cursor: pointer;
         align-items: center;
         /* text-align: center; */
     }
-    .buttons{
+    .buttons {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        /* justify-content: center; */
         align-items: center;
-        gap: 12px;
+        gap: -8px;
+        font-size: 12px;
     }
     .header>*{
-        margin: auto;
+        margin: 0px 2px;
     }
 }
 
 @media screen and (max-width: 300px) {
     .header {
         margin-top: 0px;
+        margin-top: 23px;
+        width: 98%;
     }
     .card{
         width: 100%;
